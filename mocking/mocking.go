@@ -1,9 +1,15 @@
 package main
 
+import (
+	"fmt"
+	"io"
+	"os"
+)
+
 func main() {
-	CountDown()
+	CountDown(os.Stdout)
 }
 
-func CountDown() {
-
+func CountDown(writer io.Writer) {
+	fmt.Fprint(writer, "3")
 }

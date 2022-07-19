@@ -8,7 +8,7 @@ import (
 func TestCountDown(t *testing.T) {
 	buffer := bytes.Buffer{}
 
-	CountDown(buffer)
+	CountDown(&buffer)
 
 	got := buffer.String()
 	want := "3"
