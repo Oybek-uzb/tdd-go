@@ -39,9 +39,18 @@ func TestWalk(t *testing.T) {
 				89,
 			},
 			[]string{"Chris"},
-		}, {
+		},
+		{
 			"Nested fields",
 			Person{
+				"Chris",
+				Profile{89, "London"},
+			},
+			[]string{"Chris", "London"},
+		},
+		{
+			"Pointers to things",
+			&Person{
 				"Chris",
 				Profile{89, "London"},
 			},
